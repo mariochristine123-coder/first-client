@@ -436,26 +436,29 @@ function HeroSection() {
       <Header />
 
       <div className="relative z-10 mx-auto flex max-w-[1220px] flex-1 flex-col items-center justify-center py-7 text-center lg:py-8">
-        <div className="hero-fade-up hero-float mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/70 bg-white/76 px-4 py-2 text-[12px] font-black uppercase tracking-[0.10em] text-violet shadow-[0_14px_36px_rgba(48,18,74,0.08)] backdrop-blur-xl md:text-[13px]">
-          <ShieldIcon className="h-5.5 w-5.5 text-pink" />
-          Your trusted moving partner
+        <div className="hero-content-panel hero-fade-up relative isolate flex w-full max-w-[1120px] flex-col items-center px-4 py-6 text-center sm:px-7 sm:py-8 lg:px-9 lg:py-9">
+          <div className="hero-cinematic-glow" aria-hidden="true" />
+          <div className="hero-float mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/22 bg-white/12 px-4 py-2 text-[11px] font-black uppercase tracking-normal text-white shadow-[0_14px_36px_rgba(0,0,0,0.16)] backdrop-blur-xl md:text-[12px]">
+            <ShieldIcon className="h-5.5 w-5.5 text-pink" />
+            Your trusted moving partner
+          </div>
+
+          <h1 className="hero-title relative max-w-[980px] text-[38px] font-black leading-[0.96] tracking-normal text-white sm:text-[54px] md:text-[66px] lg:text-[74px] xl:text-[82px]">
+            Moving Made Easy.
+            <span className="hero-title-accent block text-pink">We Handle Everything.</span>
+          </h1>
+
+          <p className="mt-6 max-w-[650px] text-[15px] font-semibold leading-[1.58] tracking-normal text-white/88 sm:text-[18px] lg:text-[20px]">
+            Fast, careful, and reliable moving services for homes, offices, and everything in between.
+          </p>
+
+          <div className="mt-8 flex w-full max-w-[560px] flex-col items-stretch justify-center gap-3.5 sm:flex-row">
+            <PrimaryButton />
+            <SecondaryButton />
+          </div>
         </div>
 
-        <h1 className="hero-fade-up relative max-w-[1120px] text-[38px] font-black leading-[0.96] tracking-[-0.025em] text-ink drop-shadow-[0_2px_0_rgba(255,255,255,0.55)] sm:text-[54px] md:text-[66px] lg:text-[74px] xl:text-[82px]" style={{ animationDelay: "110ms" }}>
-          Moving Made Easy.
-          <span className="block text-[#cf2a87]">We Handle Everything.</span>
-        </h1>
-
-        <p className="hero-fade-up mt-7 max-w-[710px] text-[15px] font-semibold leading-[1.58] tracking-[0.01em] text-[#322d55] sm:text-[18px] lg:text-[20px]" style={{ animationDelay: "230ms" }}>
-          Fast, careful, and reliable moving services for homes, offices, and everything in between.
-        </p>
-
-        <div className="hero-fade-up mt-8 flex w-full max-w-[560px] flex-col items-stretch justify-center gap-3.5 sm:flex-row" style={{ animationDelay: "340ms" }}>
-          <PrimaryButton />
-          <SecondaryButton />
-        </div>
-
-        <div className="hero-fade-up mt-7 flex flex-col items-center justify-center gap-4 rounded-[18px] border border-white/60 bg-white/48 px-4 py-3 shadow-[0_18px_50px_rgba(48,18,74,0.08)] backdrop-blur-xl sm:flex-row sm:gap-0" style={{ animationDelay: "450ms" }}>
+        <div className="hero-fade-up mt-5 flex flex-col items-center justify-center gap-4 rounded-[18px] border border-white/26 bg-ink/28 px-4 py-3 text-white shadow-[0_18px_50px_rgba(0,0,0,0.16)] backdrop-blur-xl sm:flex-row sm:gap-0" style={{ animationDelay: "450ms" }}>
           {trustFeatures.map((feature, index) => (
             <TrustFeature key={feature.title} feature={feature} showDivider={index > 0} />
           ))}
@@ -588,11 +591,11 @@ function PrimaryButton() {
   return (
     <a
       href="#quote"
-      className="premium-cta control-ease inline-flex h-[54px] items-center justify-center gap-4 rounded-[14px] bg-ink px-6 text-[15px] font-black text-white shadow-[0_24px_52px_rgba(21,6,55,0.24)] hover:-translate-y-1 hover:bg-violet sm:min-w-[232px]"
+      className="premium-cta control-ease group inline-flex h-[58px] items-center justify-center gap-4 rounded-[16px] border border-white/14 bg-ink px-6 text-[15px] font-black text-white shadow-[0_24px_54px_rgba(0,0,0,0.34),0_0_34px_rgba(236,19,119,0.20)] hover:-translate-y-1 hover:scale-[1.015] hover:bg-violet sm:min-w-[238px]"
     >
       <TruckIcon className="h-5.5 w-5.5" />
       Book Now
-      <span className="ml-auto grid h-7 w-7 place-items-center rounded-[9px] bg-white text-violet">
+      <span className="ml-auto grid h-8 w-8 place-items-center rounded-[10px] bg-white text-violet shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:scale-105">
         <ArrowRightIcon className="h-4.5 w-4.5" />
       </span>
     </a>
@@ -603,9 +606,9 @@ function SecondaryButton() {
   return (
     <a
       href="#services"
-      className="premium-cta control-ease inline-flex h-[54px] items-center justify-center gap-3.5 rounded-[14px] border border-violet/18 bg-white/78 px-6 text-[15px] font-black text-violet shadow-[0_20px_46px_rgba(84,26,116,0.13)] backdrop-blur-xl hover:-translate-y-1 hover:border-pink/40 hover:text-pink sm:min-w-[210px]"
+      className="premium-cta control-ease group inline-flex h-[58px] items-center justify-center gap-3.5 rounded-[16px] border border-white/28 bg-white/16 px-6 text-[15px] font-black text-white shadow-[0_18px_46px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.22)] backdrop-blur-xl hover:-translate-y-1 hover:scale-[1.012] hover:border-pink/48 hover:bg-white/24 hover:text-white sm:min-w-[214px]"
     >
-      <BoxIcon className="h-5.5 w-5.5 text-violet shrink-0" />
+      <BoxIcon className="h-5.5 w-5.5 shrink-0 text-pink transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-110" />
       View Services
     </a>
   );
@@ -617,12 +620,12 @@ function TrustFeature({ feature, showDivider }) {
   return (
     <div className="relative flex shrink-0 items-center gap-3 px-4 text-left sm:px-6">
       {showDivider ? (
-        <span className="absolute left-0 top-1/2 hidden h-9 w-px -translate-y-1/2 bg-ink/10 sm:block" aria-hidden="true" />
+        <span className="absolute left-0 top-1/2 hidden h-9 w-px -translate-y-1/2 bg-white/18 sm:block" aria-hidden="true" />
       ) : null}
       <Icon className="h-6.5 w-6.5 shrink-0 text-pink" />
-      <p className="shrink-0 text-[13px] font-black leading-[1.18] text-violet">
+      <p className="shrink-0 text-[13px] font-black leading-[1.18] text-white">
         {feature.title}
-        <span className="block">{feature.body}</span>
+        <span className="block text-white/78">{feature.body}</span>
       </p>
     </div>
   );
