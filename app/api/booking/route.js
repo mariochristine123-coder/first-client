@@ -294,6 +294,58 @@ function getTwilioClient() {
   return cachedTwilioClient;
 }
 
+async function sendBookingNotification({
+  safeName,
+  safePhone,
+  safeEmail,
+  safeMovingFrom,
+  safeMovingTo,
+  safeMoveDate,
+  safePreferredTime,
+  safePropertyType,
+  safeBedrooms,
+  safeServicesNeeded,
+  safeNotes
+}) {
+  const recipients = getNotificationRecipients();
+  const twilioClient = getTwilioClient();
+  const twilioFrom = process.env.TWILIO_WHATSAPP_FROM;
+
+  if (recipients.length === 0 || !twilioClient || !RECIPIENT_REGEX.test(twilioFrom || "")) {
+    return false;
+  }
+
+  const servicesList = safeServicesNeeded.length > 0 ? safeServicesNeeded.join(", ") : "None selected";
+  const messageBody = [
+    "WEBSITE BOOKING",
+    "",
+    `Name: ${safeName}`,
+    `Phone: ${safePhone}`,
+    `Email: ${safeEmail || "Not provided"}`,
+    "",
+    `From: ${safeMovingFrom}`,
+    `To: ${safeMovingTo}`,
+    `Date: ${safeMoveDate}`,
+    `Time: ${safePreferredTime || "Anytime"}`,
+    "",
+    `Property: ${safePropertyType} (${safeBedrooms || "N/A"} bedrooms)`,
+    `Services: ${servicesList}`,
+    `Notes: ${safeNotes || "None"}`
+  ].join("\n");
+
+  const results = await Promise.allSettled(
+    recipients.map((recipient) =>
+      twilioClient.messages.create({
+        body: messageBody,
+        from: twilioFrom,
+        to: recipient
+      })
+    )
+  );
+
+  return results.some((result) => result.status === "fulfilled");
+}
+
 export async function POST(request) {
   try {
     if (!isOriginAllowed(request)) {
@@ -335,63 +387,53 @@ export async function POST(request) {
       : [];
     const safeNotes = parsed.body.notes ? sanitize(parsed.body.notes, 1000) : null;
 
-    const { error: dbError } = await supabase.from("bookings").insert([
-      {
-        name: safeName,
-        phone: safePhone,
-        email: safeEmail,
-        moving_from: safeMovingFrom,
-        moving_to: safeMovingTo,
-        move_date: safeMoveDate,
-        preferred_time: safePreferredTime,
-        property_type: safePropertyType,
-        bedrooms: safeBedrooms,
-        services_needed: safeServicesNeeded,
-        notes: safeNotes,
-        source: "Quick Professional Movers Website"
-      }
-    ]);
+    const bookingRecord = {
+      name: safeName,
+      phone: safePhone,
+      email: safeEmail,
+      moving_from: safeMovingFrom,
+      moving_to: safeMovingTo,
+      move_date: safeMoveDate,
+      preferred_time: safePreferredTime,
+      property_type: safePropertyType,
+      bedrooms: safeBedrooms,
+      services_needed: safeServicesNeeded,
+      notes: safeNotes,
+      source: "Quick Professional Movers Website"
+    };
+
+    const notificationPayload = {
+      safeName,
+      safePhone,
+      safeEmail,
+      safeMovingFrom,
+      safeMovingTo,
+      safeMoveDate,
+      safePreferredTime,
+      safePropertyType,
+      safeBedrooms,
+      safeServicesNeeded,
+      safeNotes
+    };
+
+    const { error: dbError } = await supabase.from("bookings").insert([bookingRecord]);
 
     if (dbError) {
+      const notificationSent = await sendBookingNotification(notificationPayload);
+      if (notificationSent) {
+        return secureResponse({
+          success: true,
+          message: "Booking submitted successfully. We will contact you shortly."
+        });
+      }
+
       return secureResponse(
         { error: "Failed to save booking. Please try again." },
         { status: 500 }
       );
     }
 
-    const recipients = getNotificationRecipients();
-    const twilioClient = getTwilioClient();
-    const twilioFrom = process.env.TWILIO_WHATSAPP_FROM;
-
-    if (recipients.length > 0 && twilioClient && RECIPIENT_REGEX.test(twilioFrom || "")) {
-      const servicesList = safeServicesNeeded.length > 0 ? safeServicesNeeded.join(", ") : "None selected";
-      const messageBody = [
-        "WEBSITE BOOKING",
-        "",
-        `Name: ${safeName}`,
-        `Phone: ${safePhone}`,
-        `Email: ${safeEmail || "Not provided"}`,
-        "",
-        `From: ${safeMovingFrom}`,
-        `To: ${safeMovingTo}`,
-        `Date: ${safeMoveDate}`,
-        `Time: ${safePreferredTime || "Anytime"}`,
-        "",
-        `Property: ${safePropertyType} (${safeBedrooms || "N/A"} bedrooms)`,
-        `Services: ${servicesList}`,
-        `Notes: ${safeNotes || "None"}`
-      ].join("\n");
-
-      await Promise.allSettled(
-        recipients.map((recipient) =>
-          twilioClient.messages.create({
-            body: messageBody,
-            from: twilioFrom,
-            to: recipient
-          })
-        )
-      );
-    }
+    await sendBookingNotification(notificationPayload);
 
     return secureResponse({
       success: true,
