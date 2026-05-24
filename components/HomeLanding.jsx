@@ -422,16 +422,18 @@ function HeroSection() {
   return (
     <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-10 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[620px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] xl:max-h-[800px]">
       <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,246,251,0.92)_0%,rgba(255,232,244,0.78)_44%,rgba(252,214,235,0.88)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_31%,rgba(255,255,255,0.74)_0%,rgba(255,255,255,0.40)_30%,rgba(255,255,255,0)_58%)]" />
-        <OptimizedImage
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-95"
-          src="/assets/home-services/hero-clean-v2.webp"
-          alt=""
-          loading="eager"
-          fetchPriority="high"
-          aria-hidden="true"
-        />
+        <video
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/assets/home-services/hero-background-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,246,251,0.68)_0%,rgba(255,232,244,0.54)_44%,rgba(252,214,235,0.74)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_31%,rgba(255,255,255,0.64)_0%,rgba(255,255,255,0.32)_30%,rgba(255,255,255,0)_58%)]" />
         <div className="hero-particles absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,249,252,0)_0%,rgba(255,249,252,0.28)_100%)]" />
       </div>
