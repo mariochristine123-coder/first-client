@@ -227,18 +227,18 @@ a {
     radial-gradient(circle, rgba(236, 19, 119, 0.18) 0 1px, transparent 1.6px);
   background-position: 0 0, 44px 28px;
   background-size: 86px 86px, 124px 124px;
-  opacity: 0.34;
+  opacity: 0.14;
   animation: dustDrift 22s linear infinite alternate;
 }
 
 .hero-readability {
   background:
-    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.26) 0%, rgba(255, 248, 252, 0.16) 38%, transparent 72%),
-    radial-gradient(ellipse at center, rgba(21, 6, 55, 0.10) 0%, rgba(21, 6, 55, 0.055) 38%, transparent 70%);
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.14) 0%, rgba(255, 248, 252, 0.06) 38%, transparent 72%),
+    radial-gradient(ellipse at center, rgba(21, 6, 55, 0.13) 0%, rgba(21, 6, 55, 0.07) 38%, transparent 70%);
 }
 
 .heading-ambient {
-  background: radial-gradient(ellipse at center, rgba(236, 19, 119, 0.14) 0%, rgba(255, 255, 255, 0.13) 38%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(236, 19, 119, 0.12) 0%, rgba(255, 255, 255, 0.06) 38%, transparent 70%);
 }
 
 .premium-cta {

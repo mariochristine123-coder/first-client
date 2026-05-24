@@ -432,18 +432,18 @@ function HeroSection() {
         >
           <source src="/assets/home-services/hero-background-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,246,251,0.68)_0%,rgba(255,232,244,0.54)_44%,rgba(252,214,235,0.74)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_31%,rgba(255,255,255,0.64)_0%,rgba(255,255,255,0.32)_30%,rgba(255,255,255,0)_58%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,246,251,0.24)_0%,rgba(255,232,244,0.16)_44%,rgba(252,214,235,0.32)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_31%,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.08)_30%,rgba(255,255,255,0)_58%)]" />
         <div className="hero-particles absolute inset-0" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,249,252,0)_0%,rgba(255,249,252,0.28)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,249,252,0)_0%,rgba(255,249,252,0.14)_100%)]" />
       </div>
       <Header />
 
       <div className="relative z-10 mx-auto flex max-w-[1220px] flex-1 flex-col items-center justify-center py-7 text-center lg:py-8">
         <div className="hero-readability absolute left-1/2 top-[49%] -z-10 h-[430px] w-[min(1120px,98vw)] -translate-x-1/2 -translate-y-1/2 rounded-full" aria-hidden="true" />
-        <div className="absolute left-1/2 top-[45%] -z-10 h-[360px] w-[min(980px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.50)_0%,rgba(255,249,252,0.26)_42%,rgba(255,249,252,0)_72%)]" aria-hidden="true" />
-        <div className="absolute left-[34%] top-[55%] -z-10 h-[230px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,236,246,0.30)_0%,rgba(255,236,246,0.13)_46%,rgba(255,236,246,0)_76%)]" aria-hidden="true" />
-        <div className="absolute left-[66%] top-[58%] -z-10 h-[250px] w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.30)_0%,rgba(255,249,252,0.13)_48%,rgba(255,249,252,0)_76%)]" aria-hidden="true" />
+        <div className="absolute left-1/2 top-[45%] -z-10 h-[360px] w-[min(980px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.18)_0%,rgba(255,249,252,0.08)_42%,rgba(255,249,252,0)_72%)]" aria-hidden="true" />
+        <div className="absolute left-[34%] top-[55%] -z-10 h-[230px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,236,246,0.12)_0%,rgba(255,236,246,0.05)_46%,rgba(255,236,246,0)_76%)]" aria-hidden="true" />
+        <div className="absolute left-[66%] top-[58%] -z-10 h-[250px] w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.12)_0%,rgba(255,249,252,0.05)_48%,rgba(255,249,252,0)_76%)]" aria-hidden="true" />
         <div className="hero-fade-up hero-float mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/70 bg-white/76 px-4 py-2 text-[12px] font-black uppercase tracking-[0.10em] text-violet shadow-[0_14px_36px_rgba(48,18,74,0.08)] backdrop-blur-xl md:text-[13px]">
           <ShieldIcon className="h-5.5 w-5.5 text-pink" />
           Your trusted moving partner
