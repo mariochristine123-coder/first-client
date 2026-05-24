@@ -331,7 +331,6 @@ export async function POST(request) {
     ]);
 
     if (dbError) {
-      console.error("[Booking] DB insert failed:", dbError.code || dbError.name || "unknown");
       return secureResponse(
         { error: "Failed to save booking. Please try again." },
         { status: 500 }
@@ -376,8 +375,7 @@ export async function POST(request) {
       success: true,
       message: "Booking submitted successfully. We will contact you shortly."
     });
-  } catch (error) {
-    console.error("[Booking] Unexpected error:", error?.name || "Error");
+  } catch {
     return secureResponse(
       { error: "An unexpected error occurred. Please try again." },
       { status: 500 }

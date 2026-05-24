@@ -80,28 +80,28 @@ const stats = [
   {
     value: "4.2",
     body: "27 Reviews",
-    iconImage: "/assets/home-services/trust-icon-star.png",
+    iconImage: "/assets/home-services/trust-icon-star.webp",
     rating: true
   },
   {
     value: "7",
     body: "Years of Experience",
-    iconImage: "/assets/home-services/trust-icon-calendar.png"
+    iconImage: "/assets/home-services/trust-icon-calendar.webp"
   },
   {
     value: "5,000+",
     body: "Successful Moves Completed",
-    iconImage: "/assets/home-services/trust-icon-truck.png"
+    iconImage: "/assets/home-services/trust-icon-truck.webp"
   },
   {
     value: "5,000+",
     body: "Happy Customers Served",
-    iconImage: "/assets/home-services/trust-icon-customers.png"
+    iconImage: "/assets/home-services/trust-icon-customers.webp"
   },
   {
     value: "Licensed & Insured",
     body: "For Your Peace of Mind",
-    iconImage: "/assets/home-services/trust-icon-shield-green.png",
+    iconImage: "/assets/home-services/trust-icon-shield-green.webp",
     compact: true
   }
 ];
@@ -110,32 +110,32 @@ const services = [
   {
     title: "Home & Villa Moving",
     body: "Safe and secure moving for apartments, villas, and houses.",
-    image: "/assets/home-services/service-home-villa-moving.png"
+    image: "/assets/home-services/service-home-villa-moving.webp"
   },
   {
     title: "Office Relocation",
     body: "Efficient office moving with minimal downtime and maximum care.",
-    image: "/assets/home-services/service-office-moving.png"
+    image: "/assets/home-services/service-office-moving.webp"
   },
   {
     title: "Packing Services",
     body: "Professional packing with high-quality materials and careful handling.",
-    image: "/assets/home-services/service-packing-services.png"
+    image: "/assets/home-services/service-packing-services.webp"
   },
   {
     title: "Furniture Assembly",
     body: "Expert assembly and disassembly for all types of furniture.",
-    image: "/assets/home-services/service-furniture-assembly-new.png"
+    image: "/assets/home-services/service-furniture-assembly-new.webp"
   },
   {
     title: "Appliance Installation",
     body: "Professional installation and setup for all home appliances.",
-    image: "/assets/home-services/service-appliance-installation-new.png"
+    image: "/assets/home-services/service-appliance-installation-new.webp"
   },
   {
     title: "Handyman Services",
     body: "Reliable mounting, drilling, hanging, and quick home repairs.",
-    image: "/assets/home-services/service-handyman-services-new.png"
+    image: "/assets/home-services/service-handyman-services-new.webp"
   }
 ];
 
@@ -143,32 +143,32 @@ const reasons = [
   {
     title: "Reliable & Trustworthy",
     body: "We value your time and belongings like our own.",
-    iconImage: "/assets/home-services/trust-icon-shield.png"
+    iconImage: "/assets/home-services/trust-icon-shield.webp"
   },
   {
     title: "On-Time, Every Time",
     body: "Punctual team committed to your schedule.",
-    iconImage: "/assets/home-services/trust-icon-fast-clock.png"
+    iconImage: "/assets/home-services/trust-icon-fast-clock.webp"
   },
   {
     title: "Safe Handling",
     body: "High-quality packing and careful transportation.",
-    iconImage: "/assets/home-services/trust-icon-box.png"
+    iconImage: "/assets/home-services/trust-icon-box.webp"
   },
   {
     title: "Trained Professionals",
     body: "Experienced, background-checked moving experts.",
-    iconImage: "/assets/home-services/trust-icon-customers.png"
+    iconImage: "/assets/home-services/trust-icon-customers.webp"
   },
   {
     title: "Licensed & Insured",
     body: "Fully licensed and insured for your complete peace of mind.",
-    iconImage: "/assets/home-services/trust-icon-shield-green.png"
+    iconImage: "/assets/home-services/trust-icon-shield-green.webp"
   },
   {
     title: "24/7 Support",
     body: "We're here to help you anytime, anywhere.",
-    iconImage: "/assets/home-services/trust-icon-headset.png"
+    iconImage: "/assets/home-services/trust-icon-headset.webp"
   }
 ];
 
@@ -177,19 +177,19 @@ const processSteps = [
     number: "1",
     title: "Book Your Move",
     body: "Contact us or fill out the form. Get a free quote and choose a time that works for you.",
-    iconImage: "/assets/home-services/trust-icon-calendar.png"
+    iconImage: "/assets/home-services/trust-icon-calendar.webp"
   },
   {
     number: "2",
     title: "We Pack & Move",
     body: "Our team arrives on time, packs everything carefully, and moves it safely.",
-    iconImage: "/assets/home-services/trust-icon-truck.png"
+    iconImage: "/assets/home-services/trust-icon-truck.webp"
   },
   {
     number: "3",
     title: "Safe Delivery",
     body: "We deliver and place your items exactly where you want them. Done!",
-    iconImage: "/assets/home-services/trust-icon-house.png"
+    iconImage: "/assets/home-services/trust-icon-house.webp"
   }
 ];
 
@@ -242,93 +242,93 @@ const testimonials = [
 ];
 
 const galleryStats = [
-  { value: "5,000+", label: "Moves Completed", iconImage: "/assets/home-services/trust-icon-truck.png" },
-  { value: "98%", label: "Client Satisfaction", iconImage: "/assets/home-services/trust-icon-shield-green.png" },
-  { value: "24/7", label: "Support", iconImage: "/assets/home-services/trust-icon-headset.png" }
+  { value: "5,000+", label: "Moves Completed", iconImage: "/assets/home-services/trust-icon-truck.webp" },
+  { value: "98%", label: "Client Satisfaction", iconImage: "/assets/home-services/trust-icon-shield-green.webp" },
+  { value: "24/7", label: "Support", iconImage: "/assets/home-services/trust-icon-headset.webp" }
 ];
 
 const initialGalleryItems = 12;
 
 const portraitGalleryFiles = new Set([
-  "IMG-20260523-WA0000.jpg",
-  "IMG-20260523-WA0002.jpg",
-  "IMG-20260523-WA0005.jpg",
-  "IMG-20260523-WA0006.jpg",
-  "IMG-20260523-WA0015.jpg",
-  "IMG-20260523-WA0018.jpg",
-  "IMG-20260523-WA0020.jpg",
-  "IMG-20260523-WA0023.jpg",
-  "IMG-20260523-WA0025.jpg",
-  "IMG-20260523-WA0028.jpg",
-  "IMG-20260523-WA0032.jpg",
-  "IMG-20260523-WA0040.jpg",
-  "IMG-20260523-WA0045.jpg",
-  "IMG-20260523-WA0046.jpg",
-  "IMG-20260523-WA0047.jpg",
-  "IMG-20260523-WA0048.jpg",
-  "IMG-20260523-WA0049.jpg",
-  "IMG-20260523-WA0051.jpg",
-  "IMG-20260523-WA0052.jpg",
-  "IMG-20260523-WA0053.jpg",
-  "IMG-20260523-WA0054.jpg",
-  "IMG-20260523-WA0058.jpg"
+  "IMG-20260523-WA0000.webp",
+  "IMG-20260523-WA0002.webp",
+  "IMG-20260523-WA0005.webp",
+  "IMG-20260523-WA0006.webp",
+  "IMG-20260523-WA0015.webp",
+  "IMG-20260523-WA0018.webp",
+  "IMG-20260523-WA0020.webp",
+  "IMG-20260523-WA0023.webp",
+  "IMG-20260523-WA0025.webp",
+  "IMG-20260523-WA0028.webp",
+  "IMG-20260523-WA0032.webp",
+  "IMG-20260523-WA0040.webp",
+  "IMG-20260523-WA0045.webp",
+  "IMG-20260523-WA0046.webp",
+  "IMG-20260523-WA0047.webp",
+  "IMG-20260523-WA0048.webp",
+  "IMG-20260523-WA0049.webp",
+  "IMG-20260523-WA0051.webp",
+  "IMG-20260523-WA0052.webp",
+  "IMG-20260523-WA0053.webp",
+  "IMG-20260523-WA0054.webp",
+  "IMG-20260523-WA0058.webp"
 ]);
 
 const videoPosterFiles = {
-  "VID-20260523-WA0009.mp4": "IMG-20260523-WA0007.jpg",
-  "VID-20260523-WA0019.mp4": "IMG-20260523-WA0018.jpg",
-  "VID-20260523-WA0031.mp4": "IMG-20260523-WA0028.jpg",
-  "VID-20260523-WA0033.mp4": "IMG-20260523-WA0032.jpg",
-  "VID-20260523-WA0034.mp4": "IMG-20260523-WA0032.jpg",
-  "VID-20260523-WA0044.mp4": "IMG-20260523-WA0041.jpg",
-  "VID-20260523-WA0050.mp4": "IMG-20260523-WA0049.jpg",
-  "VID-20260523-WA0055.mp4": "IMG-20260523-WA0054.jpg",
-  "VID-20260523-WA0057.mp4": "IMG-20260523-WA0058.jpg"
+  "VID-20260523-WA0009.mp4": "IMG-20260523-WA0007.webp",
+  "VID-20260523-WA0019.mp4": "IMG-20260523-WA0018.webp",
+  "VID-20260523-WA0031.mp4": "IMG-20260523-WA0028.webp",
+  "VID-20260523-WA0033.mp4": "IMG-20260523-WA0032.webp",
+  "VID-20260523-WA0034.mp4": "IMG-20260523-WA0032.webp",
+  "VID-20260523-WA0044.mp4": "IMG-20260523-WA0041.webp",
+  "VID-20260523-WA0050.mp4": "IMG-20260523-WA0049.webp",
+  "VID-20260523-WA0055.mp4": "IMG-20260523-WA0054.webp",
+  "VID-20260523-WA0057.mp4": "IMG-20260523-WA0058.webp"
 };
 
 const galleryZipItems = [
-  { file: "IMG-20260523-WA0000.jpg", title: "Move preparation 01", featured: true },
-  { file: "IMG-20260523-WA0002.jpg", title: "Packed furniture 02" },
-  { file: "IMG-20260523-WA0004.jpg", title: "Protected items 03" },
-  { file: "IMG-20260523-WA0005.jpg", title: "Packing detail 04", wide: true },
-  { file: "IMG-20260523-WA0006.jpg", title: "Moving setup 05" },
-  { file: "IMG-20260523-WA0007.jpg", title: "Room packing 06" },
+  { file: "IMG-20260523-WA0000.webp", title: "Move preparation 01", featured: true },
+  { file: "IMG-20260523-WA0002.webp", title: "Packed furniture 02" },
+  { file: "IMG-20260523-WA0004.webp", title: "Protected items 03" },
+  { file: "IMG-20260523-WA0005.webp", title: "Packing detail 04", wide: true },
+  { file: "IMG-20260523-WA0006.webp", title: "Moving setup 05" },
+  { file: "IMG-20260523-WA0007.webp", title: "Room packing 06" },
   { file: "VID-20260523-WA0009.mp4", title: "Moving video 07", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0012.jpg", title: "Furniture protection 08", wide: true },
-  { file: "IMG-20260523-WA0014.jpg", title: "Packed belongings 09" },
-  { file: "IMG-20260523-WA0015.jpg", title: "Careful wrapping 10" },
-  { file: "IMG-20260523-WA0016.jpg", title: "Home moving 11" },
-  { file: "IMG-20260523-WA0018.jpg", title: "Team handling 12", wide: true },
+  { file: "IMG-20260523-WA0012.webp", title: "Furniture protection 08", wide: true },
+  { file: "IMG-20260523-WA0014.webp", title: "Packed belongings 09" },
+  { file: "IMG-20260523-WA0015.webp", title: "Careful wrapping 10" },
+  { file: "IMG-20260523-WA0016.webp", title: "Home moving 11" },
+  { file: "IMG-20260523-WA0018.webp", title: "Team handling 12", wide: true },
   { file: "VID-20260523-WA0019.mp4", title: "Moving video 13", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0020.jpg", title: "Safe packing 14" },
-  { file: "IMG-20260523-WA0023.jpg", title: "Project detail 15" },
-  { file: "IMG-20260523-WA0024.jpg", title: "Furniture move 16", wide: true },
-  { file: "IMG-20260523-WA0025.jpg", title: "Packed room 17" },
-  { file: "IMG-20260523-WA0028.jpg", title: "Moving materials 18" },
+  { file: "IMG-20260523-WA0020.webp", title: "Safe packing 14" },
+  { file: "IMG-20260523-WA0023.webp", title: "Project detail 15" },
+  { file: "IMG-20260523-WA0024.webp", title: "Furniture move 16", wide: true },
+  { file: "IMG-20260523-WA0025.webp", title: "Packed room 17" },
+  { file: "IMG-20260523-WA0028.webp", title: "Moving materials 18" },
   { file: "VID-20260523-WA0031.mp4", title: "Moving video 19", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0032.jpg", title: "Home project 20", wide: true },
+  { file: "IMG-20260523-WA0032.webp", title: "Home project 20", wide: true },
   { file: "VID-20260523-WA0033.mp4", title: "Moving video 21", video: true, duration: "Video" },
   { file: "VID-20260523-WA0034.mp4", title: "Moving video 22", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0039.jpg", title: "Handled furniture 23" },
-  { file: "IMG-20260523-WA0040.jpg", title: "Packing progress 24", wide: true },
-  { file: "IMG-20260523-WA0041.jpg", title: "Room setup 25" },
+  { file: "IMG-20260523-WA0039.webp", title: "Handled furniture 23" },
+  { file: "IMG-20260523-WA0040.webp", title: "Packing progress 24", wide: true },
+  { file: "IMG-20260523-WA0041.webp", title: "Room setup 25" },
   { file: "VID-20260523-WA0044.mp4", title: "Moving video 26", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0045.jpg", title: "Moving job 27" },
-  { file: "IMG-20260523-WA0046.jpg", title: "Protected move 28", wide: true },
-  { file: "IMG-20260523-WA0047.jpg", title: "Project room 29" },
-  { file: "IMG-20260523-WA0048.jpg", title: "Wrapped furniture 30" },
-  { file: "IMG-20260523-WA0049.jpg", title: "Moving detail 31" },
+  { file: "IMG-20260523-WA0045.webp", title: "Moving job 27" },
+  { file: "IMG-20260523-WA0046.webp", title: "Protected move 28", wide: true },
+  { file: "IMG-20260523-WA0047.webp", title: "Project room 29" },
+  { file: "IMG-20260523-WA0048.webp", title: "Wrapped furniture 30" },
+  { file: "IMG-20260523-WA0049.webp", title: "Moving detail 31" },
   { file: "VID-20260523-WA0050.mp4", title: "Moving video 32", video: true, duration: "Video", wide: true },
-  { file: "IMG-20260523-WA0051.jpg", title: "Packing work 33" },
-  { file: "IMG-20260523-WA0052.jpg", title: "Furniture care 34" },
-  { file: "IMG-20260523-WA0053.jpg", title: "Home moving 35" },
-  { file: "IMG-20260523-WA0054.jpg", title: "Move detail 36", wide: true },
+  { file: "IMG-20260523-WA0051.webp", title: "Packing work 33" },
+  { file: "IMG-20260523-WA0052.webp", title: "Furniture care 34" },
+  { file: "IMG-20260523-WA0053.webp", title: "Home moving 35" },
+  { file: "IMG-20260523-WA0054.webp", title: "Move detail 36", wide: true },
   { file: "VID-20260523-WA0055.mp4", title: "Moving video 37", video: true, duration: "Video" },
   { file: "VID-20260523-WA0057.mp4", title: "Moving video 38", video: true, duration: "Video" },
-  { file: "IMG-20260523-WA0058.jpg", title: "Final packing 39" },
-  { file: "IMG-20260523-WA0061.jpg", title: "Completed handling 40", wide: true },
-  { file: "IMG-20260523-WA0062.jpg", title: "Moving supplies 41" },
-  { file: "IMG-20260523-WA0063.jpg", title: "Project close 42" }
+  { file: "IMG-20260523-WA0058.webp", title: "Final packing 39" },
+  { file: "IMG-20260523-WA0061.webp", title: "Completed handling 40", wide: true },
+  { file: "IMG-20260523-WA0062.webp", title: "Moving supplies 41" },
+  { file: "IMG-20260523-WA0063.webp", title: "Project close 42" }
 ].map((item, index) => ({
   ...item,
   id: `zip-gallery-${index + 1}`,
@@ -338,372 +338,6 @@ const galleryZipItems = [
   poster: item.video ? `/assets/home-services/gallery-zip/${videoPosterFiles[item.file]}` : null,
   alt: item.video ? `${item.title} from a moving project` : `${item.title} from a moving project`
 }));
-
-const galleryItems = [
-  {
-    id: "drive-gallery-0000",
-    title: "Moving job 01",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0000.jpg",
-    alt: "Moving company gallery photo 01",
-    featured: true
-  },
-  {
-    id: "drive-gallery-0001",
-    title: "Moving job 02",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0001.jpg",
-    alt: "Moving company gallery photo 02"
-  },
-  {
-    id: "drive-gallery-0002",
-    title: "Moving job 03",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0002.jpg",
-    alt: "Moving company gallery photo 03"
-  },
-  {
-    id: "drive-gallery-0003",
-    title: "Moving job 04",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0003.jpg",
-    alt: "Moving company gallery photo 04",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0004",
-    title: "Moving job 05",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0004.jpg",
-    alt: "Moving company gallery photo 05"
-  },
-  {
-    id: "drive-gallery-0005",
-    title: "Moving job 06",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0005.jpg",
-    alt: "Moving company gallery photo 06"
-  },
-  {
-    id: "drive-gallery-0006",
-    title: "Moving job 07",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0006.jpg",
-    alt: "Moving company gallery photo 07"
-  },
-  {
-    id: "drive-gallery-0007",
-    title: "Moving job 08",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0007.jpg",
-    alt: "Moving company gallery photo 08",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0008",
-    title: "Moving job 09",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0008.jpg",
-    alt: "Moving company gallery photo 09"
-  },
-  {
-    id: "drive-gallery-0010",
-    title: "Moving job 10",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0010.jpg",
-    alt: "Moving company gallery photo 10"
-  },
-  {
-    id: "drive-gallery-0011",
-    title: "Moving job 11",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0011.jpg",
-    alt: "Moving company gallery photo 11"
-  },
-  {
-    id: "drive-gallery-0012",
-    title: "Moving job 12",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0012.jpg",
-    alt: "Moving company gallery photo 12",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0013",
-    title: "Moving job 13",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0013.jpg",
-    alt: "Moving company gallery photo 13"
-  },
-  {
-    id: "drive-gallery-0014",
-    title: "Moving job 14",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0014.jpg",
-    alt: "Moving company gallery photo 14"
-  },
-  {
-    id: "drive-gallery-0015",
-    title: "Moving job 15",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0015.jpg",
-    alt: "Moving company gallery photo 15"
-  },
-  {
-    id: "drive-gallery-0016",
-    title: "Moving job 16",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0016.jpg",
-    alt: "Moving company gallery photo 16",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0017",
-    title: "Moving job 17",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0017.jpg",
-    alt: "Moving company gallery photo 17"
-  },
-  {
-    id: "drive-gallery-0018",
-    title: "Moving job 18",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0018.jpg",
-    alt: "Moving company gallery photo 18"
-  },
-  {
-    id: "drive-gallery-0020",
-    title: "Moving job 19",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0020.jpg",
-    alt: "Moving company gallery photo 19"
-  },
-  {
-    id: "drive-gallery-0022",
-    title: "Moving job 20",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0022.jpg",
-    alt: "Moving company gallery photo 20",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0023",
-    title: "Moving job 21",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0023.jpg",
-    alt: "Moving company gallery photo 21"
-  },
-  {
-    id: "drive-gallery-0024",
-    title: "Moving job 22",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0024.jpg",
-    alt: "Moving company gallery photo 22"
-  },
-  {
-    id: "drive-gallery-0025",
-    title: "Moving job 23",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0025.jpg",
-    alt: "Moving company gallery photo 23"
-  },
-  {
-    id: "drive-gallery-0026",
-    title: "Moving job 24",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0026.jpg",
-    alt: "Moving company gallery photo 24",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0027",
-    title: "Moving job 25",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0027.jpg",
-    alt: "Moving company gallery photo 25"
-  },
-  {
-    id: "drive-gallery-0028",
-    title: "Moving job 26",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0028.jpg",
-    alt: "Moving company gallery photo 26"
-  },
-  {
-    id: "drive-gallery-0030",
-    title: "Moving job 27",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0030.jpg",
-    alt: "Moving company gallery photo 27"
-  },
-  {
-    id: "drive-gallery-0032",
-    title: "Moving job 28",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0032.jpg",
-    alt: "Moving company gallery photo 28",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0036",
-    title: "Moving job 29",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0036.jpg",
-    alt: "Moving company gallery photo 29"
-  },
-  {
-    id: "drive-gallery-0037",
-    title: "Moving job 30",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0037.jpg",
-    alt: "Moving company gallery photo 30"
-  },
-  {
-    id: "drive-gallery-0038",
-    title: "Moving job 31",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0038.jpg",
-    alt: "Moving company gallery photo 31"
-  },
-  {
-    id: "drive-gallery-0039",
-    title: "Moving job 32",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0039.jpg",
-    alt: "Moving company gallery photo 32",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0040",
-    title: "Moving job 33",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0040.jpg",
-    alt: "Moving company gallery photo 33"
-  },
-  {
-    id: "drive-gallery-0041",
-    title: "Moving job 34",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0041.jpg",
-    alt: "Moving company gallery photo 34"
-  },
-  {
-    id: "drive-gallery-0042",
-    title: "Moving job 35",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0042.jpg",
-    alt: "Moving company gallery photo 35"
-  },
-  {
-    id: "drive-gallery-0043",
-    title: "Moving job 36",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0043.jpg",
-    alt: "Moving company gallery photo 36",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0045",
-    title: "Moving job 37",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0045.jpg",
-    alt: "Moving company gallery photo 37"
-  },
-  {
-    id: "drive-gallery-0046",
-    title: "Moving job 38",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0046.jpg",
-    alt: "Moving company gallery photo 38"
-  },
-  {
-    id: "drive-gallery-0047",
-    title: "Moving job 39",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0047.jpg",
-    alt: "Moving company gallery photo 39"
-  },
-  {
-    id: "drive-gallery-0048",
-    title: "Moving job 40",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0048.jpg",
-    alt: "Moving company gallery photo 40",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0049",
-    title: "Moving job 41",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0049.jpg",
-    alt: "Moving company gallery photo 41"
-  },
-  {
-    id: "drive-gallery-0051",
-    title: "Moving job 42",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0051.jpg",
-    alt: "Moving company gallery photo 42"
-  },
-  {
-    id: "drive-gallery-0052",
-    title: "Moving job 43",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0052.jpg",
-    alt: "Moving company gallery photo 43"
-  },
-  {
-    id: "drive-gallery-0053",
-    title: "Moving job 44",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0053.jpg",
-    alt: "Moving company gallery photo 44",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0054",
-    title: "Moving job 45",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0054.jpg",
-    alt: "Moving company gallery photo 45"
-  },
-  {
-    id: "drive-gallery-0056",
-    title: "Moving job 46",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0056.jpg",
-    alt: "Moving company gallery photo 46"
-  },
-  {
-    id: "drive-gallery-0058",
-    title: "Moving job 47",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0058.jpg",
-    alt: "Moving company gallery photo 47"
-  },
-  {
-    id: "drive-gallery-0060",
-    title: "Moving job 48",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0060.jpg",
-    alt: "Moving company gallery photo 48",
-    wide: true
-  },
-  {
-    id: "drive-gallery-0061",
-    title: "Moving job 49",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0061.jpg",
-    alt: "Moving company gallery photo 49"
-  },
-  {
-    id: "drive-gallery-0062",
-    title: "Moving job 50",
-    category: "Gallery",
-    image: "/assets/home-services/gallery-drive/IMG-20260523-WA0062.jpg",
-    alt: "Moving company gallery photo 50"
-  }
-];
 
 const bookingFields = [
   { label: "Full Name", required: true, placeholder: "Enter your full name", icon: UserIcon, maxLength: 100, minLength: 2 },
@@ -732,22 +366,22 @@ const bookingBenefits = [
   {
     title: "Fast Response",
     body: "We quickly confirm your move and schedule.",
-    iconImage: "/assets/home-services/trust-icon-truck.png"
+    iconImage: "/assets/home-services/trust-icon-truck.webp"
   },
   {
     title: "Professional Team",
     body: "Experienced movers trained for safe handling.",
-    iconImage: "/assets/home-services/trust-icon-customers.png"
+    iconImage: "/assets/home-services/trust-icon-customers.webp"
   },
   {
     title: "Flexible Scheduling",
     body: "Choose the date and time that works best for you.",
-    iconImage: "/assets/home-services/trust-icon-calendar.png"
+    iconImage: "/assets/home-services/trust-icon-calendar.webp"
   },
   {
     title: "Safe & Reliable",
     body: "Your belongings are in safe hands. Always.",
-    iconImage: "/assets/home-services/trust-icon-shield-green.png"
+    iconImage: "/assets/home-services/trust-icon-shield-green.webp"
   }
 ];
 
@@ -755,17 +389,17 @@ const ctaHighlights = [
   {
     title: "Quick Response",
     body: "We respond fast and get you moving sooner.",
-    iconImage: "/assets/home-services/trust-icon-fast-clock.png"
+    iconImage: "/assets/home-services/trust-icon-fast-clock.webp"
   },
   {
     title: "100% Safe",
     body: "Your belongings are in safe hands.",
-    iconImage: "/assets/home-services/trust-icon-shield-green.png"
+    iconImage: "/assets/home-services/trust-icon-shield-green.webp"
   },
   {
     title: "Trusted Experts",
     body: "Trained, verified & experienced movers.",
-    iconImage: "/assets/home-services/trust-icon-customers.png"
+    iconImage: "/assets/home-services/trust-icon-customers.webp"
   }
 ];
 
@@ -785,44 +419,19 @@ export default function HomeLanding() {
 }
 
 function HeroSection() {
-  const [shouldPlayHeroVideo, setShouldPlayHeroVideo] = useState(false);
-
-  useEffect(() => {
-    const desktopQuery = window.matchMedia("(min-width: 768px)");
-    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-
-    function updateHeroMedia() {
-      setShouldPlayHeroVideo(desktopQuery.matches && !connection?.saveData);
-    }
-
-    updateHeroMedia();
-    desktopQuery.addEventListener("change", updateHeroMedia);
-    return () => desktopQuery.removeEventListener("change", updateHeroMedia);
-  }, []);
-
   return (
     <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-10 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[620px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] xl:max-h-[800px]">
       <div className="absolute inset-0" aria-hidden="true">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,246,251,0.92)_0%,rgba(255,232,244,0.78)_44%,rgba(252,214,235,0.88)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_31%,rgba(255,255,255,0.74)_0%,rgba(255,255,255,0.40)_30%,rgba(255,255,255,0)_58%)]" />
         <OptimizedImage
-          className="h-full w-full object-cover object-center"
-          src="/assets/home-services/hero-scene.png"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-95"
+          src="/assets/home-services/hero-clean-v2.webp"
           alt=""
           loading="eager"
           fetchPriority="high"
           aria-hidden="true"
         />
-        {shouldPlayHeroVideo ? (
-          <video
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            src="/assets/home-services/hero-background-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster="/assets/home-services/hero-scene.webp"
-          />
-        ) : null}
         <div className="hero-particles absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,249,252,0)_0%,rgba(255,249,252,0.28)_100%)]" />
       </div>
@@ -889,7 +498,7 @@ function Header() {
       <div className="flex items-center gap-4 xl:gap-5 2xl:gap-7">
         <a href="#home" onClick={handleNavClick} aria-label="Quick Professional Movers home" className="shrink-0">
           <OptimizedImage
-            src="/assets/home-services/logo-transparent.png"
+            src="/assets/home-services/logo-transparent.webp"
             alt="Quick Professional Movers"
             loading="eager"
             fetchPriority="high"
@@ -1035,7 +644,7 @@ function TrustAndServicesSection() {
     <section className="relative overflow-hidden">
       <div id="about" className="content-auto relative isolate scroll-mt-6 overflow-hidden px-5 py-10 sm:px-8 lg:py-14">
         <OptimizedImage
-          src="/assets/home-services/trust-section-background.png"
+          src="/assets/home-services/trust-section-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1064,7 +673,7 @@ function TrustAndServicesSection() {
 
       <div id="services" className="content-auto relative isolate scroll-mt-6 overflow-hidden px-5 pb-12 pt-10 sm:px-8 lg:pb-16 lg:pt-14">
         <OptimizedImage
-          src="/assets/home-services/services-section-background.png"
+          src="/assets/home-services/services-section-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1153,7 +762,7 @@ function WhyStepsTestimonialsSection() {
     <section className="relative overflow-hidden">
       <div id="why-choose-us" className="content-auto relative isolate scroll-mt-6 overflow-hidden px-5 pb-9 pt-12 sm:px-8 lg:pb-12 lg:pt-16">
         <OptimizedImage
-          src="/assets/home-services/why-choose-us-background.png"
+          src="/assets/home-services/why-choose-us-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1180,7 +789,7 @@ function WhyStepsTestimonialsSection() {
 
       <div id="how-it-works" className="content-auto relative isolate scroll-mt-6 overflow-hidden px-5 py-11 sm:px-8 lg:px-12 lg:py-14">
         <OptimizedImage
-          src="/assets/home-services/how-it-works-background.png"
+          src="/assets/home-services/how-it-works-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1204,7 +813,7 @@ function WhyStepsTestimonialsSection() {
 
       <div id="testimonials" className="content-auto relative isolate scroll-mt-6 overflow-hidden pb-12 pt-10 lg:pb-16">
         <OptimizedImage
-          src="/assets/home-services/testimonials-background.png"
+          src="/assets/home-services/testimonials-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1325,7 +934,7 @@ function GalleryBookingCtaSection() {
     <section className="relative overflow-hidden">
       <div id="gallery" className="content-auto relative isolate scroll-mt-6 overflow-hidden px-4 pb-5 pt-8 sm:px-8 lg:px-9 lg:pb-5 lg:pt-9">
         <OptimizedImage
-          src="/assets/home-services/gallery-section-background.png"
+          src="/assets/home-services/gallery-section-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-fill"
           aria-hidden="true"
@@ -1525,7 +1134,7 @@ function BookingSection() {
 
           <aside className="relative isolate overflow-hidden rounded-[16px] border border-pink/10 px-5 pb-2 pt-5 shadow-[0_16px_44px_rgba(48,18,74,0.055)] sm:px-6 xl:px-5 2xl:px-6">
             <OptimizedImage
-              src="/assets/home-services/booking-benefits-background.png"
+              src="/assets/home-services/booking-benefits-background.webp"
               alt=""
               className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
               aria-hidden="true"
@@ -1640,7 +1249,7 @@ function MoveFooterSection() {
     <section id="contact" className="scroll-mt-6 bg-[#fff5fa] px-4 pb-0 pt-4 sm:px-6 lg:px-10 xl:px-14">
       <div className="relative isolate mx-auto max-w-[1320px] overflow-hidden rounded-[24px] border border-pink/10 bg-white px-5 py-5 shadow-[0_18px_42px_rgba(48,18,74,0.08)] sm:px-7 lg:px-8">
         <OptimizedImage
-          src="/assets/home-services/cta-card-background.png"
+          src="/assets/home-services/cta-card-background.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
           aria-hidden="true"
@@ -1701,7 +1310,7 @@ function MoveFooterSection() {
         <div className="relative mx-auto max-w-[1700px]">
           <div className="grid gap-5 border-b border-white/20 pb-5 lg:grid-cols-[1.18fr_0.78fr_1fr_0.78fr_1.2fr]">
             <div>
-              <OptimizedImage src="/assets/home-services/logo-transparent.png" alt="Quick Professional Movers" className="h-[74px] w-auto object-contain" />
+              <OptimizedImage src="/assets/home-services/logo-transparent.webp" alt="Quick Professional Movers" className="h-[74px] w-auto object-contain" />
               <p className="mt-2.5 max-w-[270px] text-[13px] font-semibold leading-[1.5] text-white/88">
                 Fast, careful, and reliable moving services for homes, offices, and everything in between.
               </p>
@@ -2398,4 +2007,6 @@ function MenuIcon({ className }) {
     </svg>
   );
 }
+
+
 
