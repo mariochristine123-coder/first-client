@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("/fonts/lemon-milk/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-ink: oklch(19% 0.055 298);
+  --color-pink: oklch(58% 0.22 350);
+  --color-violet: oklch(35% 0.14 300);
+}
+
+:root {
+  --font-main: "Lemon Milk", "Aptos", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-accent: "Lemon Milk", "Aptos", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+body * {
+  font-family: var(--font-main) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: oklch(98% 0.012 340);
+  color: oklch(19% 0.055 298);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(h1, h2) {
+  font-family: var(--font-main);
+  letter-spacing: -0.02em;
+}
+
+:where(h1, h2) .text-pink {
+  font-family: var(--font-accent);
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+:where(h3, h4, button, a, label, input, textarea, select) {
+  font-family: var(--font-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 3px solid oklch(58% 0.22 350);
+  outline-offset: 4px;
+}
+
+.booking-form :is(input, select, textarea):focus,
+.booking-form :is(input, select, textarea):focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+::selection {
+  background: oklch(58% 0.22 350 / 0.16);
+  color: oklch(19% 0.055 298);
+}
+
+.premium-shell {
+  background:
+    radial-gradient(circle at 8% 3%, oklch(96% 0.035 344) 0 22rem, transparent 35rem),
+    radial-gradient(circle at 94% 22%, oklch(94% 0.032 307) 0 18rem, transparent 31rem),
+    linear-gradient(180deg, oklch(99% 0.006 340), oklch(98% 0.014 340));
+}
+
+.media-clean {
+  opacity: 1;
+  filter: none;
+}
+
+.control-ease {
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), background-color 240ms cubic-bezier(0.16, 1, 0.3, 1), color 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.control-ease:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+@keyframes premiumFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes dustDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-32px, -24px, 0);
+  }
+}
+
+.hero-fade-up {
+  animation: premiumFadeUp 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-float {
+  animation: heroFloat 5.8s ease-in-out infinite;
+}
+
+.hero-particles {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.52) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(236, 19, 119, 0.18) 0 1px, transparent 1.6px);
+  background-position: 0 0, 44px 28px;
+  background-size: 86px 86px, 124px 124px;
+  opacity: 0.34;
+  animation: dustDrift 22s linear infinite alternate;
+}
+
+.hero-readability {
+  background:
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.26) 0%, rgba(255, 248, 252, 0.16) 38%, transparent 72%),
+    radial-gradient(ellipse at center, rgba(21, 6, 55, 0.10) 0%, rgba(21, 6, 55, 0.055) 38%, transparent 70%);
+}
+
+.heading-ambient {
+  background: radial-gradient(ellipse at center, rgba(236, 19, 119, 0.14) 0%, rgba(255, 255, 255, 0.13) 38%, transparent 70%);
+}
+
+.premium-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-cta::after {
+  content: "";
+  position: absolute;
+  inset: -40% auto -40% -45%;
+  width: 38%;
+  transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 680ms cubic-bezier(0.16, 1, 0.3, 1), opacity 280ms ease;
+}
+
+.premium-cta:hover::after {
+  opacity: 1;
+  transform: translateX(410%) skewX(-18deg);
+}
+
+.premium-cta:hover {
+  box-shadow: 0 24px 58px rgba(21, 6, 55, 0.28);
+}
+
+.interactive-icon {
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), background-color 220ms cubic-bezier(0.16, 1, 0.3, 1), color 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+:where(article, label, li, a, button):hover .interactive-icon {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
+}
+
+@keyframes galleryReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-reveal {
+  animation: galleryReveal 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes marqueeHorizontal {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-horizontal {
+  display: flex;
+  width: max-content;
+  animation: marqueeHorizontal var(--marquee-duration, 35s) linear infinite;
+}
+
+.pause-hover:hover .animate-marquee-horizontal {
+  animation-play-state: paused;
+}
+
+@media (max-width: 767px) {
+  .testimonials-track {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    animation: none;
+    padding: 0 20px 12px;
+  }
+
+  .testimonials-track > article {
+    scroll-snap-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
