@@ -44,10 +44,21 @@ const RECIPIENT_REGEX = /^whatsapp:\+?[1-9]\d{7,15}$/;
 
 let cachedTwilioClient;
 
+function normalizeOrigin(value) {
+  if (!value) return null;
+
+  try {
+    return new URL(value).origin;
+  } catch {
+    return null;
+  }
+}
+
 function getAllowedOrigins() {
   const configuredOrigins = (process.env.ALLOWED_ORIGINS || process.env.NEXT_PUBLIC_SITE_URL || "")
     .split(",")
     .map((origin) => origin.trim())
+    .map(normalizeOrigin)
     .filter(Boolean);
 
   const productionOrigins = [
@@ -69,6 +80,19 @@ function getAllowedOrigins() {
       "http://127.0.0.1:3001"
     ])
   ];
+}
+
+function getRequestOrigin(request) {
+  const forwardedHost = request.headers.get("x-forwarded-host");
+  const host = (forwardedHost || request.headers.get("host") || "").split(",")[0]?.trim();
+  if (!host) return null;
+
+  const forwardedProto = request.headers.get("x-forwarded-proto");
+  const protocol = (forwardedProto || (host.startsWith("localhost") || host.startsWith("127.0.0.1") ? "http" : "https"))
+    .split(",")[0]
+    .trim();
+
+  return normalizeOrigin(`${protocol}://${host}`);
 }
 
 function secureResponse(data, options = {}) {
@@ -115,19 +139,17 @@ function isRateLimited(ip) {
 
 function isOriginAllowed(request) {
   const allowedOrigins = getAllowedOrigins();
-  const origin = request.headers.get("origin");
+  const requestOrigin = getRequestOrigin(request);
+  const origin = normalizeOrigin(request.headers.get("origin"));
 
   if (origin) {
-    return allowedOrigins.includes(origin);
+    return allowedOrigins.includes(origin) || origin === requestOrigin;
   }
 
   const referer = request.headers.get("referer");
   if (referer) {
-    try {
-      return allowedOrigins.includes(new URL(referer).origin);
-    } catch {
-      return false;
-    }
+    const refererOrigin = normalizeOrigin(referer);
+    return allowedOrigins.includes(refererOrigin) || refererOrigin === requestOrigin;
   }
 
   return process.env.NODE_ENV !== "production";
