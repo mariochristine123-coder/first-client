@@ -24,6 +24,16 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link
+          rel="preload"
+          as="video"
+          href="/assets/home-services/hero-mobile-background.mp4"
+          type="video/mp4"
+          media="(max-width: 767px), (pointer: coarse)"
+        />
+        <link rel="preload" as="image" href="/assets/home-services/logo-transparent.webp" />
+      </head>
       <body>{children}</body>
     </html>
   );

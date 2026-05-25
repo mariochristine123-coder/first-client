@@ -60,7 +60,11 @@ function getOptimizedAsset(src) {
 }
 
 function OptimizedImage({ src, loading = "lazy", decoding = "async", ...props }) {
-  return <img src={getOptimizedAsset(src)} loading={loading} decoding={decoding} {...props} />;
+  const isIconAsset = typeof src === "string" && src.includes("/trust-icon-");
+  const resolvedLoading = isIconAsset && loading === "lazy" ? "eager" : loading;
+  const fetchPriority = props.fetchPriority ?? (isIconAsset ? "low" : undefined);
+
+  return <img src={getOptimizedAsset(src)} loading={resolvedLoading} decoding={decoding} fetchPriority={fetchPriority} {...props} />;
 }
 
 const trustFeatures = [
@@ -467,7 +471,7 @@ function HeroBackgroundVideo() {
   const videoSrc = isMobile ? heroVideos.mobile : heroVideos.desktop;
 
   useEffect(() => {
-    const mobileQuery = window.matchMedia("(max-width: 639px)");
+    const mobileQuery = window.matchMedia("(max-width: 767px), (pointer: coarse)");
     const updateVideo = () => setIsMobile(mobileQuery.matches);
 
     updateVideo();
@@ -500,8 +504,10 @@ function HeroBackgroundVideo() {
         muted
         loop
         playsInline
+        poster="/assets/home-services/hero-clean-v2.webp"
         preload="auto"
         onEnded={keepLooping}
+        onCanPlay={startVideo}
         onLoadedMetadata={startVideo}
       >
         <source src={videoSrc} type="video/mp4" />
