@@ -1,7 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+
+const TestimonialsColumn = dynamic(
+  () => import("@/components/ui/testimonials-columns-1").then((module) => module.TestimonialsColumn),
+  {
+    ssr: false,
+    loading: () => <div className="h-[292px] w-full" aria-hidden="true" />
+  }
+);
 
 const navLinks = [
   { label: "Home", href: "#home", active: true },
@@ -61,10 +69,9 @@ function getOptimizedAsset(src) {
 
 function OptimizedImage({ src, loading = "lazy", decoding = "async", ...props }) {
   const isIconAsset = typeof src === "string" && src.includes("/trust-icon-");
-  const resolvedLoading = isIconAsset && loading === "lazy" ? "eager" : loading;
   const fetchPriority = props.fetchPriority ?? (isIconAsset ? "low" : undefined);
 
-  return <img src={getOptimizedAsset(src)} loading={resolvedLoading} decoding={decoding} fetchPriority={fetchPriority} {...props} />;
+  return <img src={getOptimizedAsset(src)} loading={loading} decoding={decoding} fetchPriority={fetchPriority} {...props} />;
 }
 
 const trustFeatures = [
@@ -468,6 +475,7 @@ function HeroSection() {
 
 function HeroBackgroundVideo() {
   const [isMobile, setIsMobile] = useState(true);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoSrc = isMobile ? heroVideos.mobile : heroVideos.desktop;
 
   useEffect(() => {
@@ -479,6 +487,10 @@ function HeroBackgroundVideo() {
 
     return () => mobileQuery.removeEventListener("change", updateVideo);
   }, []);
+
+  useEffect(() => {
+    setIsVideoReady(false);
+  }, [videoSrc]);
 
   function keepLooping(event) {
     const video = event.currentTarget;
@@ -492,14 +504,22 @@ function HeroBackgroundVideo() {
     const video = event.currentTarget;
 
     video.loop = true;
+    setIsVideoReady(true);
     video.play().catch(() => {});
   }
 
   return (
     <div className="absolute inset-0" aria-hidden="true">
+      <OptimizedImage
+        src="/assets/home-services/hero-clean-v2.webp"
+        alt=""
+        loading="eager"
+        fetchPriority="high"
+        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500 ${isVideoReady ? "opacity-0" : "opacity-100"}`}
+      />
       <video
         key={videoSrc}
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500 ${isVideoReady ? "opacity-100" : "opacity-0"}`}
         autoPlay
         muted
         loop

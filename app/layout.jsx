@@ -33,6 +33,12 @@ export default function RootLayout({ children }) {
           media="(max-width: 767px), (pointer: coarse)"
         />
         <link rel="preload" as="image" href="/assets/home-services/logo-transparent.webp" />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/home-services/hero-clean-v2.webp"
+          media="(max-width: 767px), (pointer: coarse)"
+        />
       </head>
       <body>{children}</body>
     </html>
