@@ -38,6 +38,11 @@ const contactDetails = {
   address: "Industrial Area 10, Industrial Area, Sharjah, United Arab Emirates"
 };
 
+const heroVideos = {
+  mobile: "/assets/home-services/hero-mobile-background.mp4",
+  desktop: "/assets/home-services/hero-background-video.mp4"
+};
+
 function getFooterLinkHref(label) {
   return linkTargets[label] ?? (footerServices.includes(label) ? "#services" : "#contact");
 }
@@ -421,28 +426,7 @@ export default function HomeLanding() {
 function HeroSection() {
   return (
     <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-12 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[700px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] lg:pb-20 xl:max-h-[800px]">
-      <div className="absolute inset-0" aria-hidden="true">
-        <video
-          className="absolute inset-0 h-full w-full object-cover object-center sm:hidden"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        >
-          <source src="/assets/home-services/hero-mobile-background.mp4" type="video/mp4" />
-        </video>
-        <video
-          className="absolute inset-0 hidden h-full w-full object-cover object-center sm:block"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        >
-          <source src="/assets/home-services/hero-background-video.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <HeroBackgroundVideo />
       <Header />
 
       <div className="relative z-10 mx-auto flex max-w-[1220px] flex-1 flex-col items-center justify-center py-7 text-center lg:-translate-y-7 lg:py-8 xl:-translate-y-9">
@@ -475,6 +459,54 @@ function HeroSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroBackgroundVideo() {
+  const [isMobile, setIsMobile] = useState(true);
+  const videoSrc = isMobile ? heroVideos.mobile : heroVideos.desktop;
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 639px)");
+    const updateVideo = () => setIsMobile(mobileQuery.matches);
+
+    updateVideo();
+    mobileQuery.addEventListener("change", updateVideo);
+
+    return () => mobileQuery.removeEventListener("change", updateVideo);
+  }, []);
+
+  function keepLooping(event) {
+    const video = event.currentTarget;
+
+    video.loop = true;
+    video.currentTime = 0;
+    video.play().catch(() => {});
+  }
+
+  function startVideo(event) {
+    const video = event.currentTarget;
+
+    video.loop = true;
+    video.play().catch(() => {});
+  }
+
+  return (
+    <div className="absolute inset-0" aria-hidden="true">
+      <video
+        key={videoSrc}
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        onEnded={keepLooping}
+        onLoadedMetadata={startVideo}
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
+    </div>
   );
 }
 
