@@ -423,7 +423,17 @@ function HeroSection() {
     <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-12 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[700px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] lg:pb-20 xl:max-h-[800px]">
       <div className="absolute inset-0" aria-hidden="true">
         <video
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center sm:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/assets/home-services/hero-mobile-background.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="absolute inset-0 hidden h-full w-full object-cover object-center sm:block"
           autoPlay
           muted
           loop
