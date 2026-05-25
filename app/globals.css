@@ -256,6 +256,20 @@ a {
     0 16px 42px rgba(236, 19, 119, 0.32);
 }
 
+@media (max-width: 639px) {
+  .hero-content-panel {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .hero-content-panel::before,
+  .hero-cinematic-glow {
+    display: none;
+  }
+}
+
 .premium-cta {
   position: relative;
   overflow: hidden;
