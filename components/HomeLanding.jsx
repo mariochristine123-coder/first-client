@@ -458,7 +458,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-fade-up mt-5 flex flex-col items-center justify-center gap-4 border-0 bg-transparent px-0 py-0 text-white shadow-none backdrop-blur-0 sm:flex-row sm:gap-0 sm:rounded-[18px] sm:border sm:border-white/26 sm:bg-ink/28 sm:px-4 sm:py-3 sm:shadow-[0_18px_50px_rgba(0,0,0,0.16)] sm:backdrop-blur-xl" style={{ animationDelay: "450ms" }}>
+        <div className="hero-fade-up mt-5 flex flex-col items-center justify-center gap-4 border-0 bg-transparent px-0 py-0 text-white shadow-none backdrop-blur-0 sm:flex-row sm:gap-0 sm:px-4 sm:py-3" style={{ animationDelay: "450ms" }}>
           {trustFeatures.map((feature, index) => (
             <TrustFeature key={feature.title} feature={feature} showDivider={index > 0} />
           ))}
