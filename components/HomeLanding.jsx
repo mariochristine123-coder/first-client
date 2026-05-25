@@ -420,7 +420,7 @@ export default function HomeLanding() {
 
 function HeroSection() {
   return (
-    <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-10 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[620px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] xl:max-h-[800px]">
+    <section id="home" className="relative isolate flex min-h-[680px] scroll-mt-6 flex-col justify-between overflow-hidden bg-[#fff9fc] px-4 pb-12 pt-4 sm:px-7 md:min-h-[720px] lg:min-h-[700px] lg:h-[calc(100vw*9/21)] lg:max-h-[760px] lg:pb-20 xl:max-h-[800px]">
       <div className="absolute inset-0" aria-hidden="true">
         <video
           className="absolute inset-0 h-full w-full object-cover object-center"
@@ -435,7 +435,7 @@ function HeroSection() {
       </div>
       <Header />
 
-      <div className="relative z-10 mx-auto flex max-w-[1220px] flex-1 flex-col items-center justify-center py-7 text-center lg:py-8">
+      <div className="relative z-10 mx-auto flex max-w-[1220px] flex-1 flex-col items-center justify-center py-7 text-center lg:-translate-y-7 lg:py-8 xl:-translate-y-9">
         <div className="hero-content-panel hero-fade-up relative isolate flex w-full max-w-[1120px] flex-col items-center px-4 py-6 text-center sm:px-7 sm:py-8 lg:px-9 lg:py-9">
           <div className="hero-cinematic-glow" aria-hidden="true" />
           <div className="hero-float mb-4 inline-flex items-center gap-2.5 rounded-full border border-white/22 bg-white/12 px-4 py-2 text-[11px] font-black uppercase tracking-normal text-white shadow-[0_14px_36px_rgba(0,0,0,0.16)] backdrop-blur-xl md:text-[12px]">
